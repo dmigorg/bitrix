@@ -48,7 +48,7 @@ try {
 
   $numRows = $CSetup->loadDataFromCsv('sample.csv');
   for ($i = 0; $i < $numRows; $i++) {
-    info('Добавление в инфоблок строки #$i');
+    info("Добавление в инфоблок строки #$i");
     [$name, $arrPropVals] = $CSetup->MapColumns($i);
     $CSetup->insertData($name, $arrPropVals);
   }
@@ -62,7 +62,7 @@ try {
  */
 function info(string $value)
 {
-  echo '<p>$value</p>';
+  echo "<p>$value</p>";
 }
 
 /**
@@ -71,7 +71,7 @@ function info(string $value)
  */
 function error(string $value)
 {
-  echo '<p style=\'color:red\'>Ошибка: $value</p>';
+  echo "<p style=\"color:red\">Ошибка: $value</p>";
   exit;
 }
 
